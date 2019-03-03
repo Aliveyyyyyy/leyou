@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/heima
+    username: root
+    password: root
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  #保证拿到的 是ip而不是localhost
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
